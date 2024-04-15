@@ -1,10 +1,10 @@
 import React from 'react'
 
-const PokemonPage = () => {
+export const PokemonPage = () => {
   return (
     <div>
     </div>
   )
 }
 
-export default PokemonPage
+

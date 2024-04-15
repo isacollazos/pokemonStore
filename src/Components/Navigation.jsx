@@ -1,27 +1,28 @@
 import React, { useContext } from 'react'
-import { Outlet } from 'react-router-dom'
-import PokemonContext from '../context/PokemonContext'
+import { Outlet ,Link} from 'react-router-dom'
+import {PokemonContext} from '../context/PokemonContext'
+import logo from "../assets/pokepedia.png"
 
-const Navigation = () => {
+export const Navigation = () => {
     const context = useContext(PokemonContext)
     console.log(PokemonContext)
 
 
   return (
     <div>
-        <header class="container">
-			<link href="/" class="logo">
-				<img src="assets/pokepedia.png" alt="Logo pokepedia" />
-			k</link>
+        <header className="container">
+			<Link href="/" className="logo">
+				<img src={logo}  alt="Logo pokepedia"/>
+			</Link>
 			<form>
-				<div class="form-group">
+				<div className="form-group">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						strokeWidth="1.5"
 						stroke="currentColor"
-						class="icon-search"
+						className="icon-search"
 					>
 						<path
 							strokeLinecap="round"
@@ -36,7 +37,7 @@ const Navigation = () => {
 					/>
 				</div>
 
-				<button class="btn-search">Buscar</button>
+				<button className="btn-search">Buscar</button>
 			</form>
 		</header>
 
@@ -44,5 +45,3 @@ const Navigation = () => {
     </div>
   )
 }
-
-export default Navigation
